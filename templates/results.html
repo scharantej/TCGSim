@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TCG Booster Pack Simulator Results</title>
+<link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+<h1>TCG Booster Pack Simulator Results</h1>
+<ul>
+{% for card in booster_pack %}
+<li>{{ card.name }} ({{ card.rarity }})</li>
+<img src="{{ card.image }}" alt="{{ card.name }}">
+<p>{{ card.description }}</p>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+---
